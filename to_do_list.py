@@ -53,11 +53,11 @@ def uncross_item():         # Uncross the tasks if they crossed by-mistake or if
     my_list.selection_clear(0,END)
 
 def delete_cross():         # remove the crossed tasks if they are accomplished and no longer wanted to see in the To-Do list
-    count=0
-    while count<my_list.size():
-        if my_list.itemcget(count,"fg")=="red":
+    count = 0
+    while count < my_list.size():
+        if my_list.itemcget(count, "fg") == "red":
             my_list.delete(my_list.index(count))
-        count+=1
+        count += 1
 
 def clear_list():           # Clear the whole task-list 
     my_list.delete(0,END)
